@@ -1,6 +1,6 @@
 # leetCode 121. Best Time to Buy and Sell Stock
 
-![문제이미지](https://github.com/pointehd/Algorithm/blob/master/src/month2007/img/200830.png?raw=true)
+![문제이미지](https://github.com/pointehd/Algorithm/blob/master/img/200830.png?raw=true)
 
 [문제링크](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 
