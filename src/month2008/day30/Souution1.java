@@ -1,4 +1,4 @@
-package month2007.day30;
+package month2008.day30;
 
 public class Souution1 {
 
