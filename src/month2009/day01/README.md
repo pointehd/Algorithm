@@ -1,6 +1,6 @@
 # leetCode 543. Diameter of Binary Tree
 
-![문제이미지](https://github.com/pointehd/Algorithm/blob/master/img/200002.png?raw=true)
+![문제이미지](https://github.com/pointehd/Algorithm/blob/master/img/200902.png?raw=true)
 
 [문제링크](https://leetcode.com/problems/diameter-of-binary-tree/)
 
