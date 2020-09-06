@@ -6,56 +6,42 @@ public class Solution1 {
 		Solution1 sol = new Solution1();
 		String s= "aabbaccc";
 //		String s = "ababcdcdababcdcd";
+		System.out.println(sol.solutionLoop(s));
+	}
+	
+	public int solutionLoop(String s) {
 		int min = s.length();
 		
 		for(int i=1; i<s.length(); i++) {
-			int aa = sol.solution(s, i);
-			System.out.println(i+ ":" + aa);
-			if(min > aa) {
-				min = aa;
-			}
+			int aa = solution(s, i);
+			min = min > aa ? aa : min;
 		}
-		
-		System.out.println(min);
+		return min;
 	}
 	
     public int solution(String s, int sliceCount){
         int length = 0;
         String shortStr = s.substring(0, sliceCount);
         int count = 0;
-        while(true ){
+        while(true){
         	if(s.startsWith(shortStr)) {
         		count++;
-        		try {
-        			s = s.substring(sliceCount, s.length());
-				} catch (Exception e) {
-					System.out.println("악 ");
-					if(count == 1) {
-	        			length += sliceCount;
-	        		}else {
-	        			length += sliceCount + (count+"").split("").length;	
-	        		}
-	        		return length;
-				}
+    			s = s.substring(sliceCount, s.length());
         	}else {
-        		
-        		if(count == 1) {
-        			length += sliceCount;
-        		}else {
-        			length += sliceCount + (count+"").split("").length;	
+        		if(count != 1) {
+//        			length += (count+"").split("").length;
+//        			숫자의 자리수를 구하는 방법 !  신기..
+        			length += (int) Math.log10(count)+1;
         		}
+        		length +=sliceCount;
         		try {
         			shortStr = s.substring(0, sliceCount);	
 				} catch (Exception e) {
-					System.out.println("length:"+length+" "+s+"\n");
 					length += s.length();
 					return length;
 				}
         		count = 0;
-        		
         	}
-        	
-        	
         }
     }
 }
