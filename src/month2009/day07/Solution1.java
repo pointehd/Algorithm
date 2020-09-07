@@ -51,25 +51,29 @@ public class Solution1 {
         List<Integer> result = new ArrayList<Integer>();
         int startIndex = 0;
         while (startIndex < progresses.length){
+        	
+        	boolean flag = true;
+        	int delete = 0;
             for(int i=startIndex; i<progresses.length; i++){
                 progresses[i] += speeds[i];
-            }
-            int delete = 0;
-            for(int i=startIndex; i<progresses.length; i++){
-                if (progresses[i] >= 100){
+                
+                if (flag && progresses[i] >= 100){
                     delete++;
-                } else {
+                } else if(flag) {
+                	flag = false;
                 	if(delete >0) {
+                		System.out.println(delete+"왜들어"+i);
                 		startIndex += delete;
                         result.add(delete);
                 	}
-                    break;
                 }
-                if(i==progresses.length-1) {
+                if(flag && i==progresses.length-1) {
+                	System.out.println(delete+"왜들어"+i);
                 	startIndex += delete;
                     result.add(delete);
                 }
             }
+            
         }
         int[] resultArray = new int[result.size()];
         for(int i=0;i < result.size(); i++){
