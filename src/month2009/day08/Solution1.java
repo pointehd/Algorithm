@@ -1,75 +1,49 @@
 package month2009.day08;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Solution1 {	
 	public static void main(String[] args) {
-		int n = 6;
-		int[] lost = {1, 2, 6};
-		int[] reserve = {2, 3, 4, 5};
+		int n = 3;
+		int[] lost = {2,3};
+		int[] reserve = {1,2};
 		
-		System.out.println("노답 "+ solution(n, lost, reserve));
+		System.out.println("result : "+ solution(n, lost, reserve));
 	}
 	
 	/*
-	 * 테스트 1 〉	실패 (0.02ms, 69.9MB)
-	테스트 2 〉	실패 (0.04ms, 69.4MB)
-	테스트 3 〉	실패 (0.02ms, 69.3MB)
-	테스트 4 〉	통과 (0.03ms, 69MB)
-	테스트 5 〉	실패 (0.02ms, 68.6MB)
-	테스트 6 〉	실패 (0.02ms, 68.7MB)
-	테스트 7 〉	실패 (0.03ms, 68.5MB)
-	테스트 8 〉	통과 (0.03ms, 70.3MB)
-	테스트 9 〉	통과 (0.02ms, 68.8MB)
-	테스트 10 〉	실패 (0.02ms, 68.9MB)
-	테스트 11 〉	통과 (0.02ms, 68.1MB)
-	테스트 12 〉	실패 (0.04ms, 69.3MB)*/
+	 * 테스트 1 〉	통과 (0.07ms, 68.1MB)
+	테스트 2 〉	통과 (0.08ms, 70.3MB)
+	테스트 3 〉	통과 (0.10ms, 69.1MB)
+	테스트 4 〉	통과 (0.06ms, 69.4MB)
+	테스트 5 〉	통과 (0.12ms, 69.7MB)
+	테스트 6 〉	통과 (0.05ms, 68.4MB)
+	테스트 7 〉	통과 (0.10ms, 69.8MB)
+	테스트 8 〉	통과 (0.07ms, 69.6MB)
+	테스트 9 〉	통과 (0.07ms, 69MB)
+	테스트 10 〉	통과 (0.07ms, 68.8MB)
+	테스트 11 〉	통과 (0.06ms, 68.5MB)
+	테스트 12 〉	통과 (0.05ms, 68.8MB)*/
 	public static int solution(int n, int[] lost, int[] reserve) {
-		int result = 0;
-		int i =0;
-		int j =0;
-		while(i<lost.length && j<lost.length){
-			int lostIndex = lost[i];
-			for(int k =j; k<reserve.length&&lostIndex <=reserve[k]+1; k++){
-                if(lostIndex == reserve[k]){
-                    j++;
-                    result ++;
-                    System.out.println("악 ");
-                    break;
-                }
-                if(lostIndex == reserve[k]-1){
-                	if(i+1==lost.length){
-                    	System.out.println("악 ");
-                        j = k+1;
-					result++;
-					break;
-                    }
-                    if(i+1< lost.length && lost[i+1] != reserve[k]){
-                        j = k+1;
-                        System.out.println("악 ");
-					result++;
-					break;
-                        
-                    }
-                    
-                    
-                }
-				if ( lostIndex == reserve[k]+1){
-					if(i-1<0){
-                        j = k+1;
-                        System.out.println("악 ");
-                        result++;
-                        break; 
-                    }
-                    if(i-1>= 0 && lost[i-1] != reserve[k]){
-                    	System.out.println("악 ");
-                       j = k+1;
-                        result++;
-                        break; 
-                    }
-                    
-				}
-			}
-			i++;
+		Set<Integer> set = new HashSet<Integer>();
+		for(int num : lost) {
+			set.add(num);
 		}
-		return n - lost.length + result;
+		for(int i = 0 ;i<reserve.length; i++) {
+			if(set.contains(reserve[i])) {
+				set.remove(reserve[i]);
+				reserve[i] = -1;
+			}
+		}
+		for(int i = 0 ;i<reserve.length; i++) {
+			if(set.contains(reserve[i]-1)) {
+				set.remove(reserve[i]-1);
+			} else if(set.contains(reserve[i]+1)) {
+				set.remove(reserve[i]+1);
+			}
+		}
+		
+		return n - set.size();
 	}
 }
