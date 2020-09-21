@@ -28,12 +28,12 @@
 [문제링크](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 ### 메모리및 시간
-* 실행시간 : 없음 
-* 메모리 : 없음 
+* 실행시간 : 0ms
+* 메모리 : 39.1 MB
 
 
 ### 느낀점
->
+> 오랜만에 구현해본 LinkedList 더 줄일수 있을 것 같은데 잘안된당..ㅠㅠ 
 
 ### 코드개선 
 
