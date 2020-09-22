@@ -24,6 +24,8 @@ public class MergeTwoSortedLists {
 	/**
 	 * LinkedList 클래스 사용 
 	 * 실행시간 동일 
+	 * 실행시간 : 0 ms
+	 * memory : 39.1 MB 
 	 * */
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		LinkedList result = new LinkedList();
@@ -51,6 +53,8 @@ public class MergeTwoSortedLists {
 	 * 클래스 미사용 
 	 * 푸는 방식은 동일 
 	 * 실행시간 동일 
+	 * 실행시간 : 0 ms
+	 * memory : 39.1 MB 
 	 * */
 	public ListNode mergeTwoListsNoClass(ListNode l1, ListNode l2) {
 		ListNode result = new ListNode();
