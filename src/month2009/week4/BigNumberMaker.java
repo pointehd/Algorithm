@@ -1,8 +1,5 @@
 package month2009.week4;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Stack;
 
 public class BigNumberMaker {
@@ -10,34 +7,24 @@ public class BigNumberMaker {
 	public static void main(String[] args) {
 		String numberStr = "4177252841";
 		int k = 4;
-		List<Integer> list = makeIntegerList(numberStr);
-		System.out.println("");
-		System.out.println(makeBigInt(list, k));
+		System.out.println(makeBigNumber(numberStr, k));
 	}
 	
-	public static List<Integer> makeIntegerList(String numberStr){
-		List<Integer> list = new ArrayList<Integer>();
-		String[] strArray = numberStr.split("");
-		for(String number : strArray) {
-			list.add(Integer.parseInt(number));
-		}
-		return list;
-	}
-	
-	public static String makeBigInt(List<Integer> list, int k){
-		Collections.sort(list);
-		Collections.reverse(list);
-		String result = "";
-		int i = 0;
-		while(result.length() < list.size() - k) {
-			result = result.concat(list.get(i)+"");
-			i++;
-		}
-		return result;
-	}
-	
-	// 전에 푼방식.
-	public static String beforeMakeBigNumber(String numbers, int k) {
+	/**
+		테스트 1 〉	통과 (0.24ms, 52.3MB)
+		테스트 2 〉	통과 (0.35ms, 52.9MB)
+		테스트 3 〉	통과 (0.42ms, 52.1MB)
+		테스트 4 〉	통과 (1.34ms, 52.8MB)
+		테스트 5 〉	통과 (1.76ms, 53.3MB)
+		테스트 6 〉	통과 (7.30ms, 53.5MB)
+		테스트 7 〉	통과 (22.43ms, 53.7MB)
+		테스트 8 〉	통과 (31.77ms, 55MB)
+		테스트 9 〉	통과 (52.00ms, 59.6MB)
+		테스트 10 〉	통과 (91.58ms, 60.4MB)
+		테스트 11 〉	통과 (0.23ms, 52.5MB)
+		테스트 12 〉	통과 (0.20ms, 52.4MB)
+	 * */
+	public static String makeBigNumber(String numbers, int k) {
 		char[] result = new char[numbers.length() - k];
         Stack<Character> stack = new Stack<>();
 
