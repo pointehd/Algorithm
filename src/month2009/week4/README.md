@@ -27,12 +27,12 @@
 [문제링크](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)
 
 ### 메모리및 시간
-* 실행시간 : -
-* 메모리 : -
+* 실행시간 : 4 ms
+* 메모리 : 48.3 MB
 
 
 ### 느낀점
-* 
+* 맘에안들지만 풀었당 다른방법이 떠오르지않는다 ㅋㅋ
 
 ### 코드개선 
 
