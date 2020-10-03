@@ -30,7 +30,8 @@ public class BigNumberMaker {
 
         for (int i=0; i<numbers.length(); i++) {
             char c = numbers.charAt(i);
-            while (!stack.isEmpty() && stack.peek() < c && k-- > 0) {
+            while (!stack.isEmpty() && stack.peek() < c && k > 0) {
+            	k--;
                 stack.pop();
             }
             stack.push(c);
