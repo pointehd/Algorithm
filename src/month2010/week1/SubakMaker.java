@@ -4,6 +4,7 @@ package month2010.week1;
 public class SubakMaker {
 	public static void main(String[] args) {
 		System.out.println(subak(3));
+		System.out.println(subakOther(5));
 	}
 	/**
 	 *  테스트 1 〉	통과 (0.29ms, 52MB)
@@ -29,5 +30,9 @@ public class SubakMaker {
 			result.append(i%2 == 1 ? "박" : "수");
 		}
 		return result.toString();
+	}
+	
+	public static String subakOther(int n) {
+		return new String(new char [n/2+1]).replace("\0", "수박").substring(0, n);
 	}
 }
