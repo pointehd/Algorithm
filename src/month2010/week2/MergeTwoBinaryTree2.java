@@ -21,6 +21,9 @@ public class MergeTwoBinaryTree2 {
     }
 	
 	
+	
+	/******* LeetCode 제공 클래스 TreeNode *********/
+	
 	public static class TreeNode {
 		int val;
 		TreeNode left;

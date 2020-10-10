@@ -12,7 +12,7 @@ public class MergeTwoBinaryTree {
 		}
 		mergeTwoTrees(t1, t2, null, true);
 		return t1;
-    }
+	}
 	
 	
 	public void mergeTwoTrees(TreeNode t1, TreeNode t2, TreeNode t1Parent, boolean leftCheck) {
@@ -31,6 +31,8 @@ public class MergeTwoBinaryTree {
 		} 
 	}
 	
+	
+	/******* LeetCode 제공 클래스 TreeNode *********/
 	public static class TreeNode {
 		int val;
 		TreeNode left;
