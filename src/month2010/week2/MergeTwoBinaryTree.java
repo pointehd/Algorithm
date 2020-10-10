@@ -41,7 +41,10 @@ public class MergeTwoBinaryTree {
 			TreeNode tree = null;
 			if( obj instanceof TreeNode) {
 				tree = (TreeNode)obj;
+			} else {
+				return false;
 			}
+			
 			try {
 				preOderCompare(this, tree);
 			} catch (Exception e) {
