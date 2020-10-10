@@ -6,30 +6,19 @@ public class MergeTwoBinaryTree2 {
 	 * 실행시간 : 0 ms
 	 * 메모리 : 39 MB
 	 * */
-	public TreeNode mergeTrees2(TreeNode t1, TreeNode t2) {
-		if(t1 == null) {
-			return t2;
-		}
-		mergeTwoTrees(t1, t2, null, true);
-		return t1;
+	public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+		if (t1 == null) {
+            return t2;
+        }
+        if (t2 == null) {
+            return t1;
+        }
+        t1.val = t1.val + t2.val;
+        t1.left = mergeTrees(t1.left, t2.left);
+        t1.right = mergeTrees(t1.right, t2.right);
+        
+        return t1;
     }
-	
-	
-	public void mergeTwoTrees(TreeNode t1, TreeNode t2, TreeNode t1Parent, boolean leftCheck) {
-		if(t1 == null && t2 == null) {
-			return ;
-		} else if (t1 != null && t2 != null) {
-			t1.val=t1.val+t2.val;
-			mergeTwoTrees(t1.left, t2.left, t1, true);
-			mergeTwoTrees(t1.right, t2.right, t1, false);
-		} else if (t1 == null && t2 != null) {
-			if(leftCheck) {
-				t1Parent.left = t2;
-			}else {
-				t1Parent.right = t2;
-			}
-		} 
-	}
 	
 	
 	public static class TreeNode {
