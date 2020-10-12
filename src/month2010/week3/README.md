@@ -20,3 +20,23 @@
 ### 참고
 *
 
+---
+
+## LeetCode. Multiply Strings
+
+[문제링크](https://leetcode.com/problems/multiply-strings/)
+
+### 메모리및 시간
+* 실행시간 : -
+* 메모리 : - 
+
+### 느낀점
+* 20.10.12 : 이렇게 풀라고 준문제가 아닐텐데 ㅎㅎ 다시해보쟈!
+
+### 코드개선 
+
+
+### 참고
+*
+
+
