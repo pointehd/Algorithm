@@ -9,7 +9,7 @@ import java.util.Map;
 public class SumThreeToZero {
 	
 	public static void main(String[] args) {
-		int[] nums = {-1,0,1,2,-1,-4};
+		int[] nums = {-1,0,1,2,-1,-4, 0, 3};
 		int[] nums2 = {12,0,3,-14,5,-11,11,-5,-2,-1,6,-7,-10,1,4,1,1,9,-3,6,-15,0,6,1,6,-12,3,7,11,-6,-8,0,9,3,-7,-1,7,-10,1,13,-4,-7,-9,-7,9,3,1,-13,-3,13,8,-11,-9,-8,-3,4,-13,7,-11,5,-14,-4,-9,10,6,-9,-6,-9,-12,11,-11,-9,11,-5,0,-3,13,-14,-1,-13,7,-7,14,5,0,-4,-6,-6,-11,-2,14,-10,2,12,8,-7,-11,-13,-9,14,5,-5,-9,1,-2,6,5,-12,-1,-10,-9,-9,-10,12,11};
 		SumThreeToZero sttz = new SumThreeToZero();
 		sttz.threeSum2(nums);
@@ -92,29 +92,28 @@ public class SumThreeToZero {
 				}
 			}
 			
-//			
 //			numberMap.forEach((k2, v2) -> {
+//				if((k1 == k2 && v1 > 1 ) || ( k1 != k2) ) {
 //					numberMap.forEach((k3, v3) -> {
-//						if((v3 == 0 && (k3 ==k2 || k1 == k3) ) 
-//								|| (v2 == 0 && (k1 ==k2 || k2 == k3) ) 
-//								|| (v1 == 0 && (k1 ==k2 || k1 == k3) ) 
-//								|| (k1 == k2 && v1 < 1) 
-//								|| (k2 == k3 && v2 < 1) 
-//								|| (k1 == k3 && v1 < 1)) {
-//							System.out.println("z"+k1+ k2+ k3);
-//						} else if(k1 == k2 && k2 == k3 && v1 < 2){
-//						} else if(k1+k2+k3 == 0) {
-//							List<Integer> list = new ArrayList<Integer>();
-//							list.add(k1);
-//							list.add(k2);
-//							list.add(k3);
-//							Collections.sort(list);
-//							if(!result.contains(list)) {
-//								result.add(list);
-//								System.out.println(list);
+//						System.out.println(k1 == k2 && k2 == k3 && v1 > 2);
+//						if( (k1 == k2 && k2 == k3 && v1 > 3)  
+//								|| (k1 == k3 && k1 != k2 && v1 > 1)
+//								|| (k2 == k3 && k1 != k2 && v2 > 1)
+//								|| (k1 != k2  && k2 != k3 && k1 != k3)) {
+//							if(k1 + k2 + k3 == 0) {
+//								List<Integer> list = new ArrayList<Integer>();
+//								list.add(k1);
+//								list.add(k2);
+//								list.add(k3);
+//								Collections.sort(list);
+//								if(!result.contains(list)) {
+//									result.add(list);
+//									System.out.println(list);
+//								}
 //							}
 //						}
 //					}); // end numberMap.forEach 3
+//				}
 //			});
 		});
 		return result;
