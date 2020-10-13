@@ -59,62 +59,69 @@ public class SumThreeToZero {
 		}
 		
 		numberMap.forEach((k1, v1) -> {
-			if (k1 == 0 && v1 > 2) {
-				List<Integer> list = new ArrayList<Integer>();
-				list.add(0);
-				list.add(0);
-				list.add(0);
-				if(!result.contains(list)) {
-					result.add(list);
-					System.out.println(list);
-				}
-			}
-			if(k1 != 0 && numberMap.containsKey(0) && numberMap.containsKey(-k1) ) {
-				List<Integer> list = new ArrayList<Integer>();
-				list.add(k1);
-				list.add(-k1);
-				list.add(0);
-				Collections.sort(list);
-				if(!result.contains(list)) {
-					result.add(list);
-					System.out.println(list);
-				}
-			}
-			if(k1 != 0 && numberMap.containsKey(k1) && numberMap.containsKey(-k1*2) && numberMap.get(k1)>1 ) {
-				List<Integer> list = new ArrayList<Integer>();
-				list.add(k1);
-				list.add(k1);
-				list.add(-k1*2);
-				Collections.sort(list);
-				if(!result.contains(list)) {
-					result.add(list);
-					System.out.println(list);
-				}
-			}
-			
-//			numberMap.forEach((k2, v2) -> {
-//				if((k1 == k2 && v1 > 1 ) || ( k1 != k2) ) {
-//					numberMap.forEach((k3, v3) -> {
-//						System.out.println(k1 == k2 && k2 == k3 && v1 > 2);
-//						if( (k1 == k2 && k2 == k3 && v1 > 3)  
-//								|| (k1 == k3 && k1 != k2 && v1 > 1)
-//								|| (k2 == k3 && k1 != k2 && v2 > 1)
-//								|| (k1 != k2  && k2 != k3 && k1 != k3)) {
-//							if(k1 + k2 + k3 == 0) {
-//								List<Integer> list = new ArrayList<Integer>();
-//								list.add(k1);
-//								list.add(k2);
-//								list.add(k3);
-//								Collections.sort(list);
-//								if(!result.contains(list)) {
-//									result.add(list);
-//									System.out.println(list);
-//								}
-//							}
-//						}
-//					}); // end numberMap.forEach 3
+//			if (k1 == 0 && v1 > 2) {
+//				List<Integer> list = new ArrayList<Integer>();
+//				list.add(0);
+//				list.add(0);
+//				list.add(0);
+//				if(!result.contains(list)) {
+//					result.add(list);
+//					System.out.println(list);
 //				}
-//			});
+//			}
+//			if(k1 != 0 && numberMap.containsKey(0) && numberMap.containsKey(-k1) ) {
+//				List<Integer> list = new ArrayList<Integer>();
+//				list.add(k1);
+//				list.add(-k1);
+//				list.add(0);
+//				Collections.sort(list);
+//				if(!result.contains(list)) {
+//					result.add(list);
+//					System.out.println(list);
+//				}
+//			}
+//			if(k1 != 0 && numberMap.containsKey(k1) && numberMap.containsKey(-k1*2) && numberMap.get(k1)>1 ) {
+//				List<Integer> list = new ArrayList<Integer>();
+//				list.add(k1);
+//				list.add(k1);
+//				list.add(-k1*2);
+//				Collections.sort(list);
+//				if(!result.contains(list)) {
+//					result.add(list);
+//					System.out.println(list);
+//				}
+//			}
+			
+			
+			
+			/****/
+			numberMap.forEach((k2, v2) -> {
+				if(v2 != 0) {
+					if((k1 == k2 && v1 > 1 ) || ( k1 != k2) ) {
+						numberMap.forEach((k3, v3) -> {
+							if( (k1 == k2 && k2 == k3 && v1 > 3)  
+									|| (k1 == k3 && k1 != k2 && v1 > 1)
+									|| (k2 == k3 && k1 != k2 && v2 > 1)
+									|| (k1 != k2  && k2 != k3 && k1 != k3)) {
+								if(k1 + k2 + k3 == 0) {
+									List<Integer> list = new ArrayList<Integer>();
+									list.add(k1);
+									list.add(k2);
+									list.add(k3);
+									Collections.sort(list);
+									if(!result.contains(list)) {
+										result.add(list);
+										System.out.println(list);
+									}
+								}
+							}
+						}); // end numberMap.forEach 3
+					}
+				}
+				
+			});
+			
+			numberMap.put(k1, 0);
 		});
 		return result;
 	}
