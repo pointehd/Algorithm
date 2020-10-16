@@ -27,7 +27,7 @@ public class SumThreeToZero {
 	 * 		continue;
 	 * }
 	 * 실행시간 :28 ms
-	 * 43.3 MB
+	 * 메모리 : 43.3 MB
 	 * */
 	public List<List<Integer>> threeSumSujin(int[] nums){
 		Set<List<Integer>> result = new HashSet<List<Integer>>();
