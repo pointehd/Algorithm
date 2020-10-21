@@ -24,7 +24,7 @@ public class ChsheMemory {
 		테스트 17 〉	통과 (2.68ms, 53.4MB)
 		테스트 18 〉	통과 (3.38ms, 53MB)
 		테스트 19 〉	통과 (4.10ms, 52.5MB)
-		테스트 20 〉	통과 (4.21ms, 52.9MB)*/
+		테스트 20 〉	통과 (4.21ms, 52.9MB) */
 	public static int chsheMemory(int cacheSize, String[] cities) {
 		int result = 0;
 		List<String> memory = new ArrayList<String>();
