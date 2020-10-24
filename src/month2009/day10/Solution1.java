@@ -11,7 +11,10 @@ public class Solution1 {
 		System.out.println(result[0]);
 		System.out.println(result[1]);
 	}
-	
+	/**
+	 * 실행 : 통과
+	 * 제출 : 실패 
+	 * */
 	public int[] coloringBook(int m, int n, int[][] picture) {
 		int numberOfArea = 0;
 		int maxSizeOfOneArea = 0;
