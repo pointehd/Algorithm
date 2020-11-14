@@ -26,17 +26,17 @@ public class Carpet {
 		 * x+y = (brown +4) /2
 		 * */
 		int sum = (brown + 4) / 2;
-		int y = 3;
-		int x = sum - y;
-		while(x >= 3 && x >= y) {
+		int x = 3;
+		int y = sum - x;
+		while(y >= 3 && y >= x) {
 			// yellow = (x - 2) * (y - 2)
-			if((x - 2) * (y - 2) == yellow){
-				answer[0] = x;
-				answer[1] = y;
+			if((y - 2) * (x - 2) == yellow){
+				answer[0] = y;
+				answer[1] = x;
 				break;
 			}
-            x--; 
-            y++;
+            y--; 
+            x++;
         }
 		return answer;
 	}
