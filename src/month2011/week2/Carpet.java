@@ -29,6 +29,7 @@ public class Carpet {
 		int x = 3;
 		int y = sum - x;
 		while(y >= 3 && y >= x) {
+			// y >= x
 			// yellow = (x - 2) * (y - 2)
 			if((y - 2) * (x - 2) == yellow){
 				answer[0] = y;
