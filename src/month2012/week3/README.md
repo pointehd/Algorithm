@@ -7,11 +7,11 @@
 [문제링크](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
 ### 메모리및 시간
-* 실행시간 : -
-* 메모리 : -   
+* 실행시간 : 0ms   
+* 메모리 : 37.2MB    
 
 ### 느낀점
-* 20.12.19 : 문제 등록  
+* 20.12.19 : 문제 등록  및 풀이 
 > 트리기본 ! inOrder(left, root, right), preOrder(root, left, right), postOrder(left, right, root)
 
 ### 코드개선 
@@ -27,11 +27,12 @@
 [문제링크](https://leetcode.com/problems/unique-binary-search-trees/)
 
 ### 메모리및 시간
-* 실행시간 : -
-* 메모리 : - 
+* 실행시간 : 0ms   
+* 메모리 : 35.7MB    
 
 ### 느낀점
-* 20.12.19 : 문제등록  
+* 20.12.19 : 문제등록 및 풀이 
+> 오우 오우 너무재미지공~~   
 
 ### 코드개선 
 
