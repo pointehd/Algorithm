@@ -2,7 +2,7 @@
 
 * 이미지는 용량상의 문제로 올리지 않겠습니다.
 
-## BAKCJOON. 11722. 가장 긴 감소하는 부분 수열 
+## BAEKJOON. 11722. 가장 긴 감소하는 부분 수열 
 
 [문제링크](https://www.acmicpc.net/problem/11722)
 
@@ -21,7 +21,7 @@
 
 ---
 
-## BACKJOON. 1562. 계단 수 
+## BAEKJOON. 1562. 계단 수 
 
 [문제링크](https://www.acmicpc.net/problem/1562)
 
