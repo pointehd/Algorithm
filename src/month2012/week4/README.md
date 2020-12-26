@@ -25,15 +25,18 @@
 
 ---
 
-## BAEKJOON. 1562. 계단 수 
+## BAEKJOON. 10844. 쉬운 계단 수 
 
-[문제링크](https://www.acmicpc.net/problem/1562)
+[문제링크](https://www.acmicpc.net/problem/10844)
 
 ### 메모리및 시간
-* 실행시간 : -     
-* 메모리 : -       
+* 실행시간 : 14840 14840   
+* 메모리 : 144ms   
 
 ### 느낀점
+* 20.12.26 : 문제 변경   
+> [이전문제](https://www.acmicpc.net/problem/1562)
+> 너무어려워서 건의하여 변경   
 * 20.12.25 : 문제등록 ~ 
 
 ### 코드개선 
