@@ -6,6 +6,7 @@
 * [Rotate Image](https://leetcode.com/problems/rotate-image/) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/leetCode/TopKFrequentElements.java)
 * [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/leetCode/PalindromicSubstrings.java)
 * [Target Sum](https://leetcode.com/problems/target-sum/) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/leetCode/TargetSum.java)
+* [22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) -[코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/leetCode/GenerateParentheses.java) 
 
 ### 푸는 중인 문제 
 
