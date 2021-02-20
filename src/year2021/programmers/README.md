@@ -7,9 +7,11 @@
 * [가장 큰 수](https://programmers.co.kr/learn/courses/30/lessons/42746) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/BigNumber.java)
 * [신규 아이디 추천](https://programmers.co.kr/learn/courses/30/lessons/72410?language=java) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/NewId.java)
 * [메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/MenuRenuwal.java)
+* [네트워크](https://programmers.co.kr/learn/courses/30/lessons/43162) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/Network.java)
+
 ### 푸는 중인 문제 
 * [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
-* [메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/43162) - [코드]()
+
 ### 보류 문제
 
 
