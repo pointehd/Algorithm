@@ -23,6 +23,9 @@ public class ControlCamera {
 		테스트 3 〉	통과 (7.51ms, 53.6MB)
 		테스트 4 〉	통과 (1.09ms, 51.7MB)
 		테스트 5 〉	통과 (8.38ms, 53.9MB)
+		
+	 * 느낀점	
+		진짜 천재들이 많구나.. 어떻게 이런생각을 ㅎㅎ 아자!
 	 * */
 	public int solution(int[][] routes) {
 		
