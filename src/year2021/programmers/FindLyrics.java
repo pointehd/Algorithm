@@ -17,9 +17,7 @@ public class FindLyrics {
     public int[] solution(String[] words, String[] queries){
         return Arrays.stream(queries).mapToInt(q->{
             String regix = "^"+q.replaceAll("\\?", "\\\\w{1}")+"$";
-            return (int)Arrays.stream(words).filter(w->{
-                return Pattern.matches(regix, w);
-            }).count();
+            return (int)Arrays.stream(words).filter(w->Pattern.matches(regix, w)).count();
         }).toArray();
     }
 }
