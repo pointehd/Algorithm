@@ -14,6 +14,7 @@
 * [섬 연결하기](https://programmers.co.kr/learn/courses/30/lessons/42861) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/ConnectIsland.java)
 * [가장 먼 노드](https://programmers.co.kr/learn/courses/30/lessons/49189) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/FurthestNode.java)
 * [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/ControlCamera.java)
+* [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/FindPrimeNumber.java)
 
 ### 푸는 중인 문제 
 * [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
