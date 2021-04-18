@@ -16,6 +16,7 @@
 * [단속카메라](https://programmers.co.kr/learn/courses/30/lessons/42884) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/ControlCamera.java)
 * [소수 찾기](https://programmers.co.kr/learn/courses/30/lessons/42839) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/FindPrimeNumber.java)
 * [여행 경로](https://programmers.co.kr/learn/courses/30/lessons/43164) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/TravelRoute.java)
+* [멀쩡한 사각형](https://programmers.co.kr/learn/courses/30/lessons/62048) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/SolidSquare.java)
 
 ### 푸는 중인 문제 
 * [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
