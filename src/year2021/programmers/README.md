@@ -18,9 +18,10 @@
 * [여행 경로](https://programmers.co.kr/learn/courses/30/lessons/43164) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/TravelRoute.java)
 * [멀쩡한 사각형](https://programmers.co.kr/learn/courses/30/lessons/62048) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/SolidSquare.java)
 
-### 푸는 중인 문제 
+### 못푼 문제 
 * [자물쇠와 열쇠](https://programmers.co.kr/learn/courses/30/lessons/60059)
 * [가사검색](https://programmers.co.kr/learn/courses/30/lessons/60060) - [코드](https://github.com/pointehd/Algorithm/blob/master/src/year2021/programmers/FindLyrics.java)
+* [합승 택시 요금](https://programmers.co.kr/learn/courses/30/lessons/72413)
 
 ### 보류 문제
 
