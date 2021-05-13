@@ -7,34 +7,39 @@ import java.io.InputStreamReader;
 /**
  * 느낀점
  * 2021. 05. 12 : 이게 dp 문제라니 상상도 못했다...
+ * 2021. 05. 13 : 쉬운듯 어려운듯~
  * */
 public class MakeOne {
-    int min = 100000;
+    static Integer[] dp;
+    /**
+     * Memory : 6,7152 KB
+     * Run time : 264 ms
+     * */
     public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
 
-        MakeOne one = new MakeOne();
-        one.solution(0, n);
-        System.out.println(one.min);
+        dp = new Integer[n + 1];
+        dp[0] = dp[1] = 0;
+
+        System.out.print(solution(n));
+
     }
 
-    public void solution(int min, int x){
-        if(x == 1){
-            this.min = Math.min(this.min, min);
-            return ;
+    static int solution(int n) {
+        if(dp[n] == null){
+            if(n%6 == 0) { // n이 3,2 로 나누어떨어질때
+                dp[n] = Math.min(Math.min(solution(n/3), solution(n/2)), solution(n-1))+1;
+            } else if(n%3 ==0) { // 3으로 나누어떨어질때
+                dp[n] = Math.min(solution(n/3), solution(n-1))+1;
+            } else if(n%2 ==0) { // 2로 나누어떨어질때
+                dp[n] = Math.min(solution(n/2), solution(n-1))+1;
+            } else {
+                dp[n] = solution(n-1)+1;
+            }
         }
-        if(x % 2 == 0) {
-            solution(min+1, x/2);
-
-        }
-        if(x % 3 == 0) {
-            solution(min+1, x/3);
-        }
-        if(x>1){
-            solution(min+1, x-1);
-        }
+        return dp[n];
     }
-
 }
