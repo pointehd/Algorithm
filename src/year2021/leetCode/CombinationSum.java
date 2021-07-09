@@ -19,6 +19,11 @@ public class CombinationSum {
         }
         for (int i=index; i<tmp.size(); i++) {
 
+            if (candidates[i] <=  target) {
+                tmp.add(candidates[i]);
+                candidatesTracking(candidates, tempSize, tempSize+1, target-candidates[i], tmp);
+                tmp.remove(tmp.size()-1);
+            }
         }
     }
 
