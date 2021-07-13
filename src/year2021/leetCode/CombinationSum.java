@@ -5,10 +5,15 @@ import java.util.List;
 
 public class CombinationSum {
     List<List<Integer>> result = null;
+
+
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         result = new ArrayList<>();
-
-
+        for (int i=0; i<candidates.length; i++){
+            List<Integer> tmp = new ArrayList();
+            tmp.add(candidates[i]);
+            candidatesTracking(candidates, i, 1, target-candidates[i], tmp);
+        }
         return result;
     }
 
@@ -18,7 +23,6 @@ public class CombinationSum {
             return ;
         }
         for (int i=index; i<tmp.size(); i++) {
-
             if (candidates[i] <=  target) {
                 tmp.add(candidates[i]);
                 candidatesTracking(candidates, tempSize, tempSize+1, target-candidates[i], tmp);
@@ -28,7 +32,13 @@ public class CombinationSum {
     }
 
     public static void main(String[] args) {
-
+        int[] candidates = {2,3, 5};
+        int target = 8;
+        List<List<Integer>> result = new CombinationSum().combinationSum(candidates, target);
+        for ( List<Integer> list : result){
+            list.stream().map(e->e+" ").forEach(System.out::print);
+            System.out.println();
+        }
     }
 
 }
