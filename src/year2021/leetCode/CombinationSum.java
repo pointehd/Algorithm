@@ -3,9 +3,16 @@ package year2021.leetCode;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * 39. Combination Sum
+ * https://leetcode.com/problems/combination-sum/submissions/
+ *
+ * RunTime:3 ms
+ * Memory: 41.6 MB
+ * */
 public class CombinationSum {
     List<List<Integer>> result = null;
-
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         result = new ArrayList<>();
@@ -17,15 +24,15 @@ public class CombinationSum {
         return result;
     }
 
-    public void candidatesTracking(int[] candidates, int index, int tempSize, int target, List<Integer> tmp){
+    public void candidatesTracking(int[] candidates, int index, int tmpSize, int target, List<Integer> tmp){
         if (target == 0) {
             result.add(new ArrayList(tmp));
             return ;
         }
-        for (int i=index; i<tmp.size(); i++) {
+        for (int i=index; i<candidates.length; i++) {
             if (candidates[i] <=  target) {
                 tmp.add(candidates[i]);
-                candidatesTracking(candidates, tempSize, tempSize+1, target-candidates[i], tmp);
+                candidatesTracking(candidates, i, tmpSize+1, target-candidates[i], tmp);
                 tmp.remove(tmp.size()-1);
             }
         }
@@ -35,10 +42,8 @@ public class CombinationSum {
         int[] candidates = {2,3, 5};
         int target = 8;
         List<List<Integer>> result = new CombinationSum().combinationSum(candidates, target);
-        for ( List<Integer> list : result){
-            list.stream().map(e->e+" ").forEach(System.out::print);
-            System.out.println();
-        }
+        System.out.println(result.size());
+        result.stream().forEach(System.out::println);
     }
 
 }
