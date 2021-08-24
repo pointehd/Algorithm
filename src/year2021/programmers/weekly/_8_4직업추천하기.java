@@ -1,9 +1,9 @@
-package year2021.programmers;
+package year2021.programmers.weekly;
 /**
  * Programmers  직업 추천하기
  * https://programmers.co.kr/learn/courses/30/lessons/84325
  * */
-public class Weekly직업군추천하기 {
+class _8_4직업추천하기 {
     public String solution(String[] table, String[] languages, int[] preference) {
         String answer = "";
         return answer;
