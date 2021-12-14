@@ -57,6 +57,7 @@ public class Printer {
 
     private boolean highScore(int match, int[] priorities) {
         return Arrays.stream(priorities).filter(num -> match < num).count() == 0;
+        // TODO maxValue 이용하는것도 생각해보기
     }
 
     public static void main(String[] args) {
