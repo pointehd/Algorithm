@@ -14,41 +14,32 @@ package year2021.programmers;
  * */
 public class VowelsDictionary {
     int answer = 0;
-    char[] orderVowels = {'A', 'E', 'I', 'O', 'U', ' '};
+    String matchWord;
+    boolean findFlag = false;
+
     public int solution(String word) {
-
-
-
-        /**
-         * A E I O U
-         * A, AA, AAA, , ,
-         * AAAA,
-         * AAAAA, AAAAE, AAAAI, AAAAO, AAAAU (+5)
-         * AAAE,
-         * AAAEA, AAAEE, AAAEI, AAAEO, AAAEU (+5)
-         * AAAI, ...
-         * (+5)
-         * AAAO
-         * (+5)
-         * AAAU
-         * (+5)
-         * AAE
-         * */
-
+        this.matchWord = word;
+        recursiveMakeWord("");
         return answer;
     }
 
-    public static void main(String[] args) {
-
-    }
-
-    public void makStr(StringBuffer str, String word) {
-        if(str.length() < 5) {
-            str.append(orderVowels[0]);
+    private void recursiveMakeWord(String now) {
+        if (this.findFlag || now.equals(this.matchWord)) {
+            this.findFlag = true;
+            return ;
         }
-
-
-        if(word.equals(str.toString())) return;
+        this.answer++;
+        if (now.length() == 5) {
+            return ;
+        }
+        recursiveMakeWord(now+'A');
+        recursiveMakeWord(now+'E');
+        recursiveMakeWord(now+'I');
+        recursiveMakeWord(now+'O');
+        recursiveMakeWord(now+'U');
     }
 
+    public static void main(String[] args) {
+        System.out.println(new VowelsDictionary().solution("I"));
+    }
 }
