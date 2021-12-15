@@ -34,6 +34,10 @@ import java.util.stream.IntStream;
  * 테스트 25 〉	통과 (5.77ms, 78.5MB)
  * 테스트 26 〉	통과 (4.30ms, 72.7MB)
  * 테스트 27 〉	통과 (5.92ms, 75MB)
+ *
+ *
+ * Compareable 인터페이스 구현예제
+ * https://codechacha.com/ko/java8-stream-sorted/
  * */
 public class FailureRate {
 
@@ -47,21 +51,12 @@ public class FailureRate {
         return IntStream.range(0, N)
                 .boxed()
                 .map(index -> new Rate(index+1, answer[index]))
-                .sorted((rate1, rate2) -> {
-                            if (rate1.rate == rate2.rate) {
-                                return rate1.index > rate2.index
-                                    ? 1
-                                    : -1;
-                            } else {
-                                if (rate1.rate < rate2.rate) return 1;
-                                return -1;
-                            }
-                })
+                .sorted()
                 .mapToInt(rate -> rate.index)
                 .toArray();
     }
 
-    public static class Rate{
+    public static class Rate implements Comparable<Rate>{
         static double totalUser;
         int index;
         double rate;
@@ -75,6 +70,17 @@ public class FailureRate {
                 totalUser =  totalUser - failUser;
             }
 
+        }
+        @Override
+        public int compareTo(Rate rate2) {
+            if (this.rate == rate2.rate) {
+                return this.index > rate2.index
+                        ? 1
+                        : -1;
+            } else {
+                if (this.rate < rate2.rate) return 1;
+                return -1;
+            }
         }
     }
 
