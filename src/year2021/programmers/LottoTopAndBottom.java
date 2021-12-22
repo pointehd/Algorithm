@@ -25,7 +25,7 @@ public class LottoTopAndBottom {
         int match =  matchCount.intValue();
         // 맞은수 =  6 - 기억하는 숫자 수  + (기억하는숫자 중 맞은수)
         int top = 1 + myLottos.size() - match;
-        top = top < 1 ? 1 : top;
+        top = top > 6 ? 6 : top;
         int bottom = 7-match;
         if(bottom > 6) {
             bottom = 6;
@@ -36,7 +36,7 @@ public class LottoTopAndBottom {
     }
 
     public static void main(String[] args) {
-        int[] lottos = {0, 21, 22, 23, 1, 0};
+        int[] lottos = {4, 2, 3, 5, 15, 7};
         int[] win_numbs = {31, 10, 45, 1, 6, 19};
         Arrays.stream(new LottoTopAndBottom().solution(lottos, win_numbs))
                 .forEach(System.out::println);
