@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Programmers. 로또의 최고 순위오 최저순위
+ * Programmers. 로또의 최고 순위와 최저순위
  * https://programmers.co.kr/learn/courses/30/lessons/77484
  *
  * */
