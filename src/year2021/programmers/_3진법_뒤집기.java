@@ -30,7 +30,7 @@ public class _3진법_뒤집기 {
         StringBuffer sb = new StringBuffer();
         int remainder = n;
         while (remainder > 0) {
-            sb.append(remainder % 3 + "");
+            sb.append(remainder % 3);
             remainder /= 3;
         }
         return sb.toString();
