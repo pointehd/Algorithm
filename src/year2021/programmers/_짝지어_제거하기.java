@@ -5,20 +5,20 @@ public class _짝지어_제거하기 {
         StringBuffer sb = new StringBuffer(s);
 
         int index = 0;
-        while (index < sb.length()) {
+        while (index+1 < sb.length()) {
             char tmp = sb.charAt(index);
             if (tmp == sb.charAt(index + 1)) {
                 String tt = sb.toString();
                 sb.delete(index, index + 2);
-                System.out.println(tt+" : "+sb);
-                index =0;
+                index = index -1 < 0 ? 0 : index-1;
+            }else {
+                index++;
             }
-            index++;
         }
         return sb.length() == 0 ? 1 : 0;
     }
 
     public static void main(String[] args) {
-        System.out.println(new _짝지어_제거하기().solution("cdcd"));
+        System.out.println(new _짝지어_제거하기().solution("bccbcc"));
     }
 }
