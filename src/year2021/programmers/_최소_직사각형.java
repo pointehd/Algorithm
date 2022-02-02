@@ -1,4 +1,4 @@
-package year2021.programmers.weekly;
+package year2021.programmers;
 
 /**
  * Programmers. 최소 직사각형
