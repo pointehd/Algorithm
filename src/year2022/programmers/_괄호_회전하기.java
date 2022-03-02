@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 /**
  * Programmers. 괄호 회전하기
  * https://programmers.co.kr/learn/courses/30/lessons/76502
- *
+ * <p>
  * 테스트 1 〉	통과 (24.40ms, 91.1MB)
  * 테스트 2 〉	통과 (16.54ms, 78.1MB)
  * 테스트 3 〉	통과 (15.91ms, 78.7MB)
@@ -28,15 +28,14 @@ import java.util.stream.Collectors;
 public class _괄호_회전하기 {
     public int solution(String s) {
         int answer = 0;
-        List<String> list = Arrays.stream(s.split("")).collect(Collectors.toList());
-
-        match(list);
-        list.stream().forEach(System.out::println);
-        for(int i=0; i < s.length(); i++){
+        List<String> list = Arrays.stream(s.split(""))
+                .collect(Collectors.toList()); // java.util.Arrays
+//        List<String> list = Arrays.asList(s.split("")); // remove 안됨.  java.util.Arrays$ArrayList
+        for (int i = 0; i < s.length(); i++) {
             String tmp = list.get(0);
             list.remove(0);
             list.add(tmp);
-            if(match(list)) {
+            if (match(list)) {
                 answer++;
             }
         }
@@ -49,34 +48,25 @@ public class _괄호_회전하기 {
         for (String s : list) {
             switch (s) {
                 case "}":
-                    if (stack.size() > 0 && stack.peek().equals("{")) {
-                        stack.pop();
-                    } else {
+                    if (stack.isEmpty() || !stack.peek().equals("{"))
                         return false;
-                    }
+                    stack.pop();
                     break;
                 case ")":
-                    if (stack.size() > 0 && stack.peek().equals("(")) {
-                        stack.pop();
-                    } else {
+                    if (stack.isEmpty() || !stack.peek().equals("("))
                         return false;
-                    }
+                    stack.pop();
                     break;
                 case "]":
-                    if (stack.size() > 0 && stack.peek().equals("[")) {
-                        stack.pop();
-                    } else {
+                    if (stack.isEmpty() || !stack.peek().equals("["))
                         return false;
-                    }
+                    stack.pop();
                     break;
                 default:
-                        stack.add(s);
+                    stack.add(s);
             }
         }
-        if(stack.size() > 0) {
-            return false;
-        }
-        return true;
+        return stack.isEmpty();
     }
 
 
