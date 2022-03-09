@@ -68,8 +68,6 @@ public class _괄호_회전하기 {
         }
         return stack.isEmpty();
     }
-
-
     public static void main(String[] args) {
         String str = "[](){}";
         System.out.println(new _괄호_회전하기().solution(str));
