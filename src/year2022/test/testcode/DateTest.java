@@ -10,26 +10,24 @@ import java.time.temporal.*;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class DateTest {
 
     public static void main(String[] args) {
-        ZoneId romeZone = ZoneId.of("Europe/Rome");
-        ZoneId koreazone = ZoneId.of("Asia/Seoul");
-
-        ZoneOffset newYorkOffset = ZoneOffset.of("-05:00");
-        LocalDateTime dateTime = LocalDateTime.of(2014, Month.MARCH, 18, 13, 45);
-        OffsetDateTime offsetDateTime = OffsetDateTime.of(dateTime, newYorkOffset);
-        System.out.println(offsetDateTime);
-        Chronology japan = Chronology.ofLocale(Locale.JAPAN);
-        ChronoLocalDate now = japan.dateNow();
-        System.out.println(now);
-
-//        TemporalAdjusters
+        LocalDate nowDate = LocalDate.now(); // 2022-03-21
+        LocalDate nextFriday = nowDate.with(TemporalAdjusters.nextOrSame(DayOfWeek.FRIDAY)); // 2022-03-25
+//        LocalDate nextWorkDay = nextFriday.with(new NextWorkingDay()); // 2022-03-28
+//        System.out.println(nextWorkDay);
+        new NextWorkingDay();
     }
     public static class NextWorkingDay implements TemporalAdjuster {
+        public void test() {
+            System.out.println("testsetestsetse");
+        }
         @Override
         public Temporal adjustInto(Temporal temporal) {
+            System.out.println("test");
             DayOfWeek dow = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK)); // 요일가져오기
             int dayToAdd = 1;
             if (dow == DayOfWeek.FRIDAY) dayToAdd = 3;
