@@ -21,6 +21,7 @@ public class _10828 {
             String[] methodAndNumber = line.split(" ");
             stack.run(methodAndNumber[0], methodAndNumber.length >1 ? Integer.parseInt(methodAndNumber[1]) : null);
         }
+        br.close();
     }
 
     static class Stack {
