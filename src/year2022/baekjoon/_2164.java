@@ -11,7 +11,7 @@ import java.util.Scanner;
  * Memory: 4,9020 KB
  * RunTime: 276 ms
  */
-public class _2164 {
+class _2164 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
