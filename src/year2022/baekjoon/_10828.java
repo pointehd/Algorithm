@@ -6,12 +6,12 @@ import java.io.InputStreamReader;
 
 /**
  * Baekjoon. 스택
- * https://www.acmicpc.net/problem/10828
+ * https://www.acmicpc.net/problem/10828텍
  *
  * Memory: 18,820 KB
  * RunTime: 396 ms
  * */
-public class _10828 {
+class _10828 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
